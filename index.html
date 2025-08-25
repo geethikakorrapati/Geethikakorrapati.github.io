@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geethika Korrapati | Generative AI Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js" defer></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+      background: linear-gradient(270deg, #1E3A8A, #1E40AF, #3B82F6);
+      background-size: 300% 300%;
+      animation: gradientBG 40s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    #tsparticles { position: fixed; width: 100%; height: 100%; z-index: -1; }
+
+    header { text-align: center; padding: 120px 20px 50px; }
+    header h1 {
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+    }
+    header h2 { font-size: 1.5rem; color: #ffffffcc; margin-bottom: 20px; font-weight: 400; }
+    header p { font-size: 1.1rem; color: #ffffffaa; max-width: 800px; margin: 0 auto 30px; line-height: 1.6; }
+
+    nav { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 50px; }
+    nav button {
+      padding: 10px 20px; border: none; border-radius: 25px;
+      background: #4A90E2; color: #fff; cursor: pointer; transition: 0.3s;
+    }
+    nav button:hover { background: #357ABD; transform: scale(1.05); }
+
+    section {
+      max-width: 1000px; margin: 0 auto 50px; padding: 20px;
+      background: rgba(74, 144, 226, 0.2); border-radius: 15px;
+      display: none; opacity: 0; transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+    section.active { display: block; opacity: 1; transform: translateY(0); }
+    section h3 {
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+    }
+
+    .project-card, .skill-card {
+      background: rgba(74, 144, 226, 0.3); padding: 20px; margin: 15px 0;
+      border-radius: 15px; transition: all 0.3s ease;
+    }
+    .project-card:hover, .skill-card:hover { transform: scale(1.05); box-shadow: 0 0 20px #4A90E2; }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .skill-card h4 {
+      color: #FFD700;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+    }
+    .skill-card ul { list-style: disc; margin-left: 20px; }
+
+    footer {
+      text-align: center; padding: 40px 20px; background: #0a0e27; border-top: 1px solid #4A90E2;
+    }
+    footer a { margin: 0 10px; color: #4A90E2; font-size: 1.2rem; transition: 0.3s; }
+    footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <div id="tsparticles"></div>
+
+  <header>
+    <h1>Geethika Korrapati</h1>
+    <h2>Generative AI Engineer | AI & ML</h2>
+    <p>Passionate about building cutting-edge AI & ML solutions, specializing in Generative AI, LLMs, NLP, and Deep Learning with a focus on real-world impact.</p>
+    <nav>
+      <button onclick="showSection('projects')" aria-label="View Projects">Projects</button>
+      <button onclick="showSection('skills')" aria-label="View Skills">Skills</button>
+      <button onclick="showSection('experience')" aria-label="View Experience">Experience</button>
+      <button onclick="showSection('education')" aria-label="View Education">Education</button>
+      <button onclick="showSection('certificates')" aria-label="View Certificates">Certificates</button>
+    </nav>
+  </header>
+
+  <section id="projects" class="active">
+    <h3>💡 Projects</h3>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap:20px;">
+      <div class="project-card">
+        <strong style="color:#FFD700;">Pre-Trained GPT from Scratch: Vet-GPT</strong>
+        <ul>
+          <li>Pre-trained a GPT model from scratch using PyTorch and CUDA across 4 GPUs, achieving 82% accuracy on veterinary diagnostic data.</li>
+          <li>Curated a unique dataset with custom web crawlers, processing 50,000+ records for training.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">Housing Affordability Data Analysis</strong>
+        <ul>
+          <li>Analyzed trends for 57 U.S. states using TensorFlow neural networks and decision trees.</li>
+          <li>Improved prediction accuracy by 12% over baseline models, providing 5 actionable insights for stakeholders.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">3D Campus Map Development: Purdue Northwest</strong>
+        <ul>
+          <li>Developed an interactive 3D map using Wi-Fi logs and sensor data.</li>
+          <li>Predicted traffic flows with 85% accuracy and reduced peak congestion by 10% through data-driven campus planning recommendations.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">AI Chatbot with Web Search & Citations</strong>
+        <ul>
+          <li>Developed an intelligent chatbot that performs real-time web searches and generates responses using an LLM.</li>
+          <li>Ensured reliability, transparency, and trustworthiness in AI-generated information.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">Heart Disease Prediction (ML Internship Project)</strong>
+        <ul>
+          <li>Developed a machine learning model for heart disease prediction, achieving 88% accuracy.</li>
+          <li>Improved performance via hyperparameter tuning using Grid Search and Randomized Search.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">Python-based Animations & Tracking Website (TCS Internship)</strong>
+        <ul>
+          <li>Developed Python-based animations and a tracking website with fully functional apps delivered on time.</li>
+          <li>Designed and tested object-oriented Python solutions with zero critical bugs in production.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">RAG-based NLP Recommendation Engine (Wipro)</strong>
+        <ul>
+          <li>Led development of a Retrieval-Augmented Generation (RAG) NLP recommendation engine using prompt engineering.</li>
+          <li>Built a Generative AI-driven auto-recommendation system using LangChain and QdrantDB.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h3>🛠 Skills</h3>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h4>Core Programming & Foundations</h4>
+        <ul>
+          <li>Python (AI/ML)</li>
+          <li>SQL</li>
+          <li>Linux & Shell Scripting</li>
+          <li>C++ / Java</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Machine Learning</h4>
+        <ul>
+          <li>Regression, Classification, Clustering</li>
+          <li>Feature Engineering & Model Selection</li>
+          <li>Supervised/Unsupervised/Semi-supervised Learning</li>
+          <li>Scikit-learn</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Deep Learning</h4>
+        <ul>
+          <li>Neural Networks (MLPs)</li>
+          <li>CNNs</li>
+          <li>RNNs, LSTMs</li>
+          <li>Transformers & Attention Mechanism</li>
+          <li>TensorFlow & PyTorch</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Generative AI</h4>
+        <ul>
+          <li>Autoencoders & VAEs</li>
+          <li>GANs & Diffusion Models</li>
+          <li>LLMs (GPT, LLaMA, Mistral)</li>
+          <li>Hugging Face Transformers</li>
+          <li>Prompt Engineering & RAG</li>
+          <li>LoRA/QLoRA/PEFT Fine-tuning</li>
+          <li>RLHF & Multi-modal AI</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Cloud & MLOps</h4>
+        <ul>
+          <li>AWS, GCP, Azure</li>
+          <li>MLflow, Airflow</li>
+          <li>Docker, Kubernetes</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Tools & Frameworks</h4>
+        <ul>
+          <li>Git & GitHub/GitLab</li>
+          <li>Jupyter / Colab</li>
+          <li>LangChain, LlamaIndex</li>
+          <li>Flask, FastAPI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h3>💼 Work Experience</h3>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+      <div class="project-card">
+        <strong style="color:#FFD700;">Wipro | AI Full-Stack Software Engineer</strong>
+        <br><em>May 2022 - Sep 2023 | Karnataka, India (Hybrid)</em>
+        <ul>
+          <li>Developed Generative AI and full-stack Proof of Concept (POC) and production-ready solutions for Wipro’s internal talent marketplace platform.</li>
+          <li>Engineered AI/ML models for enterprise use cases, boosting accuracy by 30%.</li>
+          <li>Built RAG-based NLP recommendation engine using LangChain and QdrantDB.</li>
+          <li>Delivered backend services (Python, FastAPI, SQLAlchemy) and responsive UIs (React 18, TypeScript, Tailwind CSS, TanStack Router/Query).</li>
+          <li>Built real-time Kafka pipelines handling 10K+ events/sec for Generative AI microservices.</li>
+          <li>Reduced AI feature deployment cycles by 50% through CI/CD (Jenkins) on Microsoft Azure, improving system performance by 20%.</li>
+          <li>Translated complex business requirements into robust technical solutions by collaborating with cross-functional teams in fast-paced agile environments (JIRA/Bitbucket).</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">Machine Learning Intern</strong>
+        <br><em>Mar 2022 - May 2022 | Hyderabad, Telangana, India (Remote)</em>
+        <ul>
+          <li>Developed a machine learning model for heart disease prediction, achieving 88% accuracy on a benchmark dataset.</li>
+          <li>Enhanced model performance via hyperparameter tuning using Grid Search and Randomized Search.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <strong style="color:#FFD700;">Tata Consultancy Services | Software Engineer (Internship)</strong>
+        <br><em>Mar 2021 - May 2021 | Hyderabad, Telangana, India (Remote)</em>
+        <ul>
+          <li>Developed Python-based animations and a tracking website, delivering fully functional apps on time.</li>
+          <li>Resolved 10+ technical issues in team projects, improving delivery speed by 15%.</li>
+          <li>Designed and tested object-oriented Python solutions with zero critical bugs, enhancing code reliability.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h3>🎓 Education</h3>
+    <ul style="list-style:none; padding:0; gap:20px; display:flex; flex-direction:column;">
+      <li style="background: rgba(74,144,226,0.3); padding:20px; border-radius:15px; box-shadow: 0 0 15px #4A90E2; margin-bottom:20px;">
+        <strong style="color:#fff; font-size:1.2rem;">Master’s in Computer Science</strong>  
+        <span style="color:#FFD700; font-weight:bold;"> | Purdue University Northwest</span>
+        <br>
+        <em style="color:#FFD700;">Major in Computer Science:</em> Pursued a Master’s degree focusing on advanced algorithms, systems design, and intelligent technologies, specializing in Artificial Intelligence.
+      </li>
+      <li style="background: rgba(74,144,226,0.3); padding:20px; border-radius:15px; box-shadow: 0 0 15px #4A90E2;">
+        <strong style="color:#fff; font-size:1.2rem;">Bachelor’s in Electronics and Communication Engineering</strong>  
+        <br>
+        <em style="color:#FFD700;">Key Project:</em> Power Reduction in Domino Logic using Clock Gating in 16nm CMOS Technology  
+        <ul style="margin-top:10px; list-style:disc; margin-left:20px; color:#fff;">
+          <li>Reduced power consumption in CMOS domino logic circuits using clock gating and output hold circuitry.</li>
+          <li>Implemented a 2:1 multiplexer for retaining circuit state during standby.</li>
+          <li>Simulations on 2-input NAND, 2-input NOR, and 1-bit full adder in 16nm CMOS.</li>
+          <li>Achieved 99.37% average power reduction, 4.53% increase in propagation delay, and minor area increase.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="certificates">
+    <h3>🏆 Certificates</h3>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+      <div class="project-card"><strong style="color:#FFD700;">Python (TCS YEP)</strong></div>
+      <div class="project-card"><strong style="color:#FFD700;">Cloud Computing (Cognizant Digital Nurture)</strong></div>
+      <div class="project-card"><strong style="color:#FFD700;">Robotics and Machine Learning Workshop (APSSDC)</strong></div>
+      <div class="project-card"><strong style="color:#FFD700;">Drone Technology – Fopple Technologies Pvt, Ltd.</strong></div>
+    </div>
+  </section>
+
+<footer>
+  <a href="mailto:korrapatigeethika@gmail.com" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+  <a href="https://www.linkedin.com/in/geethika-korrapati-3a0823248/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/geethikakorrapati" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+</footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('projects'); // Show projects section by default
+      if (typeof tsParticles !== 'undefined') {
+        tsParticles.load({
+          id: "tsparticles",
+          options: {
+            fpsLimit: 60,
+            particles: {
+              number: { value: 20 },
+              color: { value: "#1E40AF" },
+              shape: { type: "circle" },
+              opacity: { value: 0.15, random: true },
+              size: { value: 1, random: true },
+              links: { enable: false },
+              move: { enable: true, speed: 0.2, direction: "none", random: true, outMode: "bounce" }
+            },
+            interactivity: {
+              events: { onHover: { enable: false }, onClick: { enable: false } },
+              modes: { grab: { distance: 150, links: { opacity: 0.6 } }, push: { quantity: 4 } }
+            },
+            detectRetina: true
+          }
+        });
+      } else {
+        console.error('tsParticles is not loaded. Check the CDN link or network connection.');
+      }
+    });
+  </script>
+</body>
+</html>
