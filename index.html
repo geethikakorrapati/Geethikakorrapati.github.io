@@ -87,15 +87,15 @@
     <h2>Generative AI Engineer | AI & ML</h2>
     <p>Passionate about building cutting-edge AI & ML solutions, specializing in Generative AI, LLMs, NLP, and Deep Learning with a focus on real-world impact.</p>
     <nav>
-      <button onclick="showSection('projects')" aria-label="View Projects">Projects</button>
-      <button onclick="showSection('skills')" aria-label="View Skills">Skills</button>
-      <button onclick="showSection('experience')" aria-label="View Experience">Experience</button>
-      <button onclick="showSection('education')" aria-label="View Education">Education</button>
-      <button onclick="showSection('certificates')" aria-label="View Certificates">Certificates</button>
+      <button onclick="toggleSection('projects')" aria-label="Toggle Projects">Projects</button>
+      <button onclick="toggleSection('skills')" aria-label="Toggle Skills">Skills</button>
+      <button onclick="toggleSection('experience')" aria-label="Toggle Experience">Experience</button>
+      <button onclick="toggleSection('education')" aria-label="Toggle Education">Education</button>
+      <button onclick="toggleSection('certificates')" aria-label="Toggle Certificates">Certificates</button>
     </nav>
   </header>
 
-  <section id="projects" class="active">
+  <section id="projects">
     <h3>💡 Projects</h3>
     <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap:20px;">
       <div class="project-card">
@@ -151,109 +151,110 @@
   </section>
   
   <section id="skills">
-  <h3>🛠 Skills</h3>
-  <div class="skills-container">
-    <div class="skill-card">
-      <h4>Core Programming & Foundations</h4>
-      <ul>
-        <li>Python (AI/ML)</li>
-        <li>SQL</li>
-        <li>Linux & Shell Scripting</li>
-        <li>C++</li>
-        <li>Java</li>
-      </ul>
+    <h3>🛠 Skills</h3>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h4>Core Programming & Foundations</h4>
+        <ul>
+          <li>Python (AI/ML)</li>
+          <li>SQL</li>
+          <li>Linux & Shell Scripting</li>
+          <li>C++</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Mathematics & Theory</h4>
+        <ul>
+          <li>Linear Algebra</li>
+          <li>Probability & Statistics</li>
+          <li>Calculus</li>
+          <li>Information Theory</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Machine Learning</h4>
+        <ul>
+          <li>Regression, Classification, Clustering</li>
+          <li>Feature Engineering & Model Selection</li>
+          <li>Supervised/Unsupervised/Semi-supervised Learning</li>
+          <li>Scikit-learn</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Deep Learning</h4>
+        <ul>
+          <li>Neural Networks (MLPs)</li>
+          <li>CNNs</li>
+          <li>RNNs, LSTMs</li>
+          <li>Transformers & Attention Mechanism</li>
+          <li>TensorFlow & PyTorch</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Data Handling & Visualization</h4>
+        <ul>
+          <li>Pandas, NumPy</li>
+          <li>Matplotlib, Seaborn, Plotly</li>
+          <li>Data Cleaning & Feature Engineering</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Databases & Vector Stores</h4>
+        <ul>
+          <li>SQL Databases (MySQL, PostgreSQL, DB2)</li>
+          <li>NoSQL (MongoDB, Cassandra)</li>
+          <li>Vector Databases (FAISS, Pinecone, Weaviate, Milvus)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Cloud & MLOps</h4>
+        <ul>
+          <li>AWS (EC2, S3, SageMaker, Bedrock)</li>
+          <li>GCP (Vertex AI)</li>
+          <li>Azure (AI Studio, Cognitive Services)</li>
+          <li>MLflow</li>
+          <li>Airflow</li>
+          <li>Docker, Kubernetes</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Tools & Frameworks</h4>
+        <ul>
+          <li>Git & GitHub/GitLab</li>
+          <li>Jupyter Notebooks / Google Colab</li>
+          <li>LangChain, LlamaIndex</li>
+          <li>Flask, FastAPI</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Responsible AI & Ethics</h4>
+        <ul>
+          <li>AI Safety, Bias & Fairness</li>
+          <li>Data Privacy (PII Handling, GDPR Basics)</li>
+          <li>Model Explainability (SHAP, LIME)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h4>Generative AI</h4>
+        <ul>
+          <li>Autoencoders & Variational Autoencoders (VAEs)</li>
+          <li>Generative Adversarial Networks (GANs)</li>
+          <li>Diffusion Models (Stable Diffusion, DDPMs, DALL·E-like)</li>
+          <li>Large Language Models (GPT, LLaMA, Mistral)</li>
+          <li>Hugging Face Transformers</li>
+          <li>Prompt Engineering & Optimization</li>
+          <li>Retrieval-Augmented Generation (RAG)</li>
+          <li>Fine-tuning (LoRA, QLoRA, PEFT)</li>
+          <li>Reinforcement Learning with Human Feedback (RLHF)</li>
+          <li>Multi-modal AI (Text, Image, Audio, Video)</li>
+        </ul>
+      </div>
     </div>
-    <div class="skill-card">
-      <h4>Mathematics & Theory</h4>
-      <ul>
-        <li>Linear Algebra</li>
-        <li>Probability & Statistics</li>
-        <li>Calculus</li>
-        <li>Information Theory</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Machine Learning</h4>
-      <ul>
-        <li>Regression, Classification, Clustering</li>
-        <li>Feature Engineering & Model Selection</li>
-        <li>Supervised/Unsupervised/Semi-supervised Learning</li>
-        <li>Scikit-learn</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Deep Learning</h4>
-      <ul>
-        <li>Neural Networks (MLPs)</li>
-        <li>CNNs</li>
-        <li>RNNs, LSTMs</li>
-        <li>Transformers & Attention Mechanism</li>
-        <li>TensorFlow & PyTorch</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Data Handling & Visualization</h4>
-      <ul>
-        <li>Pandas, NumPy</li>
-        <li>Matplotlib, Seaborn, Plotly</li>
-        <li>Data Cleaning & Feature Engineering</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Databases & Vector Stores</h4>
-      <ul>
-        <li>SQL Databases (MySQL, PostgreSQL, DB2)</li>
-        <li>NoSQL (MongoDB, Cassandra)</li>
-        <li>Vector Databases (FAISS, Pinecone, Weaviate, Milvus)</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Cloud & MLOps</h4>
-      <ul>
-        <li>AWS (EC2, S3, SageMaker, Bedrock)</li>
-        <li>GCP (Vertex AI)</li>
-        <li>Azure (AI Studio, Cognitive Services)</li>
-        <li>MLflow</li>
-        <li>Airflow</li>
-        <li>Docker, Kubernetes</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Tools & Frameworks</h4>
-      <ul>
-        <li>Git & GitHub/GitLab</li>
-        <li>Jupyter Notebooks / Google Colab</li>
-        <li>LangChain, LlamaIndex</li>
-        <li>Flask, FastAPI</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Responsible AI & Ethics</h4>
-      <ul>
-        <li>AI Safety, Bias & Fairness</li>
-        <li>Data Privacy (PII Handling, GDPR Basics)</li>
-        <li>Model Explainability (SHAP, LIME)</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h4>Generative AI</h4>
-      <ul>
-        <li>Autoencoders & Variational Autoencoders (VAEs)</li>
-        <li>Generative Adversarial Networks (GANs)</li>
-        <li>Diffusion Models (Stable Diffusion, DDPMs, DALL·E-like)</li>
-        <li>Large Language Models (GPT, LLaMA, Mistral)</li>
-        <li>Hugging Face Transformers</li>
-        <li>Prompt Engineering & Optimization</li>
-        <li>Retrieval-Augmented Generation (RAG)</li>
-        <li>Fine-tuning (LoRA, QLoRA, PEFT)</li>
-        <li>Reinforcement Learning with Human Feedback (RLHF)</li>
-        <li>Multi-modal AI (Text, Image, Audio, Video)</li>
-      </ul>
-    </div>
-  </div>
- </section>
+  </section>
 
-  <section id="experience">
+  <section id="experienc
+e">
     <h3>💼 Work Experience</h3>
     <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
       <div class="project-card">
@@ -262,7 +263,7 @@
         <ul>
           <li>Developed Generative AI and full-stack Proof of Concept (POC) and production-ready solutions for Wipro’s internal talent marketplace platform.</li>
           <li>Engineered AI/ML models for enterprise use cases, boosting accuracy by 30%.</li>
-          <li>Built RAG-based NLP recommendation engine using LangChain and QdrantDB.</li>
+          <li>Built eisenabled RAG-based NLP recommendation engine using LangChain and QdrantDB.</li>
           <li>Delivered backend services (Python, FastAPI, SQLAlchemy) and responsive UIs (React 18, TypeScript, Tailwind CSS, TanStack Router/Query).</li>
           <li>Built real-time Kafka pipelines handling 10K+ events/sec for Generative AI microservices.</li>
           <li>Reduced AI feature deployment cycles by 50% through CI/CD (Jenkins) on Microsoft Azure, improving system performance by 20%.</li>
@@ -283,7 +284,7 @@
         <ul>
           <li>Developed Python-based animations and a tracking website, delivering fully functional apps on time.</li>
           <li>Resolved 10+ technical issues in team projects, improving delivery speed by 15%.</li>
-          <li>Designed and tested object-oriented Python solutions with zero critical bugs, enhancing code reliability.</li>
+          <li>Designed and tested object-oriented Python solutions with with zero critical bugs, enhancing code reliability.</li>
         </ul>
       </div>
     </div>
@@ -298,7 +299,7 @@
         <br>
         <em style="color:#FFD700;">Major in Computer Science:</em> Pursued a Master’s degree focusing on advanced algorithms, systems design, and intelligent technologies, specializing in Artificial Intelligence.
       </li>
-      <li style="background: rgba(74,144,226,0.3); padding:20px; border-radius:15px; box-shadow: 0 0 15px #4A90E2;">
+      <li style="background: rgba(74,144,226,0.3); padding:20px; border-radius:15px; box-shadow: 0 0 boxes 15px #4A90E2;">
         <strong style="color:#fff; font-size:1.2rem;">Bachelor’s in Electronics and Communication Engineering</strong>  
         <br>
         <em style="color:#FFD700;">Key Project:</em> Power Reduction in Domino Logic using Clock Gating in 16nm CMOS Technology  
@@ -322,22 +323,30 @@
     </div>
   </section>
 
-<footer>
-  <a href="mailto:korrapatigeethika@gmail.com" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
-  <a href="https://www.linkedin.com/in/geethika-korrapati-3a0823248/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-  <a href="https://github.com/geethikakorrapati" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-</footer>
+  <footer>
+    <a href="mailto:korrapatigeethika@gmail.com" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/geethika-korrapati-3a0823248/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/geethikakorrapati" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+  </footer>
 
   <script>
-    function showSection(id) {
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      const isActive = section.classList.contains('active');
       const sections = document.querySelectorAll('section');
+      
+      // Close all sections
       sections.forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      // If the section was not active, open it
+      if (!isActive) {
+        section.classList.add('active');
+        window.scrollTo({ top: section.offsetTop - 100, behavior: 'smooth' });
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      showSection('projects'); // Show projects section by default
+      // No section is shown by default
       if (typeof tsParticles !== 'undefined') {
         tsParticles.load({
           id: "tsparticles",
