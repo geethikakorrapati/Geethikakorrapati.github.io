@@ -1,344 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geethika Korrapati - AI/ML Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Ensures smooth scrolling when clicking navigation links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Custom background gradient for the Hero section */
-        .gradient-bg {
-            background: linear-gradient(135deg, #4b0082 0%, #000000 100%);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geethika Korrapati — AI/ML Engineer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;background:#0A0A0C;color:#F3F1F7;}
+  h1,h2,h3,.display{font-family:'Poppins',sans-serif;}
+  .hero-bg{background:radial-gradient(circle at 50% 0%, #3B1E63 0%, #14071F 45%, #0A0A0C 100%);}
+  .pill{border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);}
+  .pill-active{background:#7C3AED;border-color:#7C3AED;color:#fff;}
+  .card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);}
+  .timeline-item.active{background:linear-gradient(90deg, rgba(124,58,237,0.18), rgba(124,58,237,0.03));border-color:#7C3AED;}
+  ::selection{background:#7C3AED;color:#fff;}
+  input::placeholder{color:#8B87A0;}
+</style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body>
 
-<nav class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <a href="#home" class="text-2xl font-bold text-purple-700">Geethika K.</a>
-            <div class="flex space-x-4 md:space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-purple-700 transition-colors font-medium">Home</a>
-                <a href="#experience" class="text-gray-600 hover:text-purple-700 transition-colors font-medium">Experience</a>
-                <a href="#projects" class="text-gray-600 hover:text-purple-700 transition-colors font-medium">Projects</a>
-                <a href="#skills" class="text-gray-600 hover:text-purple-700 transition-colors font-medium">Skills</a>
-                <a href="#education" class="text-gray-600 hover:text-purple-700 transition-colors font-medium">Education</a>
-                <a href="#contact" class="text-gray-600 hover:text-purple-700 transition-colors font-medium">Contact</a>
-            </div>
-        </div>
+<!-- NAV -->
+<nav class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <span class="text-lg font-semibold display">Geethika Korrapati</span>
+    <div class="hidden sm:flex gap-8 text-sm text-gray-300">
+      <a href="#experience" class="hover:text-purple-400 transition">Experience</a>
+      <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+      <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+      <a href="#education" class="hover:text-purple-400 transition">Education</a>
+      <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
     </div>
+  </div>
 </nav>
 
-<section id="home" class="h-screen flex items-center justify-center px-4 gradient-bg">
-    <div class="text-center text-white max-w-4xl mx-auto">
-        <div class="mb-8">
-            <div class="w-40 h-40 mx-auto rounded-full bg-white p-2 mb-6">
-                <img src="image.png" alt="Profile" class="w-full h-full rounded-full object-cover">
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                Geethika Korrapati
-            </h1>
-            <p class="text-lg md:text-xl mb-8 text-purple-100">
-                AI/ML Engineer | Data Scientist
-            </p>
-            <p class="text-base leading-relaxed max-w-3xl mx-auto mb-12 text-white">
-                AI/ML Engineer with 2.5+ years of experience in designing, developing, and deploying scalable ML solutions across NLP, computer vision, forecasting, and generative applications. Expert in full-stack ML pipelines using Python, Scikit-learn, Pandas, MLflow, XGBoost, Docker, FastAPI, and AWS SageMaker. Skilled in deep learning with PyTorch, TensorFlow, Keras, and advanced transformers (GPT-4, BERT, LLaMA, T5) optimized for high performance.
-            </p>
-        </div>
-        <div class="flex justify-center gap-4 flex-wrap">
-            <a href="Geethika Korrapati Resume.pdf" download class="px-6 py-2 bg-white text-purple-700 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Download Resume
-            </a>
-            <a href="#contact" class="px-6 py-2 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition-colors">
-                Contact
-            </a>
-        </div>
+<!-- HERO -->
+<section class="hero-bg pt-20 pb-24 px-6 text-center">
+  <div class="max-w-3xl mx-auto">
+    <!-- Replace src below with your own photo -->
+    <div class="w-40 h-40 mx-auto rounded-full ring-4 ring-white/10 mb-8 flex items-center justify-center bg-gradient-to-br from-purple-700 to-fuchsia-600 text-4xl font-bold display overflow-hidden">
+      <img id="profile-photo" src="" alt="Geethika Korrapati" class="w-full h-full object-cover hidden" onerror="this.classList.add('hidden')">
+      <span id="profile-initials">GK</span>
     </div>
-</section>
-
-<section id="experience" class="py-20 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-purple-700">
-            Professional Experience
-        </h2>
-
-<div class="bg-white rounded-lg shadow-lg p-8 mb-8">
-    <h3 class="text-2xl font-bold text-purple-700 mb-2">
-        AI/ML/DL Developer Intern
-    </h3>
-    <p class="text-gray-600 mb-6">
-        Jio Robotics, Columbia, MD | On-site | Aug 2025 – Present
+    <h1 class="text-5xl md:text-6xl font-extrabold display mb-4">Geethika Korrapati</h1>
+    <p class="text-lg md:text-xl text-purple-300 font-medium mb-6">Senior AI/ML Engineer · GenAI, RAG &amp; Agentic AI</p>
+    <p class="text-gray-300 leading-relaxed max-w-2xl mx-auto mb-10">
+      I'm an AI/ML Engineer with 3+ years of experience building GenAI, NLP, and agentic AI systems for enterprise environments — from LLM evaluation frameworks at PG&amp;E to RAG-based pharmacovigilance automation at AbbVie. I enjoy turning complex, unstructured information into reliable, production-grade AI pipelines.
     </p>
-    <ul class="space-y-3 text-gray-700">
-        <li>Developed and deployed LLM-based applications using GPT-4 and LangChain for reasoning, decision-making, and autonomous control in real-world robots.</li>
-        <li>Built and optimized computer vision models for object detection, tracking, and pose estimation on physical robots using Python, OpenCV, and PyTorch.</li>
-        <li>Applied reinforcement learning and machine learning techniques to improve robotic navigation and autonomous behavior.</li>
-        <li>Designed ML pipelines for data preprocessing, model training, and evaluation, integrated with CAD-based robotic system designs.</li>
-        <li>Created FastAPI REST APIs to enable smooth communication between AI models, robot control modules, and CAD workflows.</li>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="Geethika_Korrapati_Resume.pdf" download class="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:bg-gray-200 transition">Download Resume</a>
+      <a href="#contact" class="px-6 py-3 border border-white/20 rounded-xl font-semibold hover:bg-white/10 transition">Contact</a>
+      <a href="#experience" class="px-6 py-3 border border-white/20 rounded-xl font-semibold hover:bg-white/10 transition">View Experience</a>
+    </div>
+  </div>
+</section>
 
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24 px-6 border-t border-white/10">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold display text-center mb-3">Professional Experience</h2>
+    <p class="text-gray-400 text-center mb-10">Applied GenAI, RAG, and agentic AI work across pharma, energy, and enterprise systems.</p>
+
+    <div class="max-w-xl mx-auto mb-12 relative">
+      <input id="exp-filter" type="text" placeholder="Filter (e.g., RAG, LangChain, FAISS, AWS...)"
+        class="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-11 pr-4 text-sm focus:outline-none focus:border-purple-500">
+      <svg class="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </div>
+
+    <div class="grid md:grid-cols-[340px_1fr] gap-6">
+      <!-- Timeline -->
+      <div class="card rounded-2xl p-4">
+        <div class="flex items-center justify-between px-2 py-2 mb-2">
+          <span class="font-semibold">Timeline</span>
+          <span class="text-xs text-gray-500" id="role-count">3 roles</span>
+        </div>
+        <div id="timeline-list" class="space-y-2"></div>
+      </div>
+
+      <!-- Detail -->
+      <div id="role-detail" class="card rounded-2xl p-8"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 px-6 border-t border-white/10">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold display text-center mb-3">Projects</h2>
+    <p class="text-gray-400 text-center mb-12">Independent and academic work exploring GenAI from the ground up.</p>
+
+    <div class="card rounded-2xl p-8 max-w-3xl mx-auto">
+      <p class="text-xs text-purple-400 mb-2">Academic Project · Purdue University</p>
+      <h3 class="text-2xl font-bold display mb-4">VetGPT: Pre-Training a GPT Model from Scratch</h3>
+      <p class="text-gray-300 mb-6 leading-relaxed">
+        Built a domain-specific GPT language model entirely from scratch — without starting from a pretrained checkpoint — to explore transformer architecture and training dynamics firsthand, then applied it to veterinary diagnostic reasoning.
+      </p>
+      <ul class="space-y-3 text-sm text-gray-300 mb-8">
+        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>Pre-trained a GPT-style transformer from scratch using PyTorch and CUDA, distributing training across 4 GPUs to handle the compute load of full pre-training.</li>
+        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>Curated a training corpus of 50,000+ records using custom-built web crawlers to source veterinary and diagnostic text data.</li>
+        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>Cleaned, tokenized, and structured the dataset for language model pre-training, iterating on architecture and hyperparameters to improve convergence.</li>
+        <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>Achieved 82% accuracy on veterinary diagnostic classification tasks, validating the model's ability to reason over domain-specific medical language.</li>
+      </ul>
+      <p class="text-sm text-gray-500 mb-3">Tech Stack</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="pill rounded-full px-3 py-1.5 text-xs">PyTorch</span>
+        <span class="pill rounded-full px-3 py-1.5 text-xs">CUDA</span>
+        <span class="pill rounded-full px-3 py-1.5 text-xs">GPT Architecture</span>
+        <span class="pill rounded-full px-3 py-1.5 text-xs">Multi-GPU Training</span>
+        <span class="pill rounded-full px-3 py-1.5 text-xs">Web Crawling</span>
+        <span class="pill rounded-full px-3 py-1.5 text-xs">Data Curation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24 px-6 border-t border-white/10">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold display text-center mb-3">Skills &amp; Technologies</h2>
+    <p class="text-gray-400 text-center mb-10">Core stack across GenAI, agentic systems, and applied ML engineering.</p>
+
+    <div class="max-w-xl mx-auto mb-6 relative">
+      <input id="skill-filter" type="text" placeholder="Search skills (e.g., RAG, FAISS, Docker...)"
+        class="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-11 pr-4 text-sm focus:outline-none focus:border-purple-500">
+      <svg class="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </div>
+
+    <div id="skill-chips" class="flex flex-wrap justify-center gap-2 mb-10"></div>
+    <div id="skill-grid" class="grid md:grid-cols-2 gap-4"></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-24 px-6 border-t border-white/10">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold display text-center mb-12">Education</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card rounded-2xl p-8">
+        <p class="text-purple-400 text-sm mb-2">Master's Program</p>
+        <h3 class="text-2xl font-bold display mb-2">Master of Science in Computer Science</h3>
+        <p class="text-gray-400 mb-6">Purdue University · Indiana, USA</p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="pill rounded-xl p-4">
+            <p class="text-xs text-gray-500 mb-1">GPA</p>
+            <p class="font-semibold">3.7 / 4.0</p>
+          </div>
+          <div class="pill rounded-xl p-4">
+            <p class="text-xs text-gray-500 mb-1">Duration</p>
+            <p class="font-semibold">Aug 2023 – May 2025</p>
+          </div>
+        </div>
+        <p class="text-xs text-gray-500 mt-6 mb-2">Relevant Areas</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill rounded-full px-3 py-1.5 text-xs">Machine Learning</span>
+          <span class="pill rounded-full px-3 py-1.5 text-xs">NLP</span>
+          <span class="pill rounded-full px-3 py-1.5 text-xs">Deep Learning</span>
+          <span class="pill rounded-full px-3 py-1.5 text-xs">Generative AI</span>
+        </div>
+      </div>
+
+      <div class="card rounded-2xl p-8">
+        <p class="text-sm text-gray-500 mb-4">Quick Notes</p>
+        <ul class="space-y-4 text-gray-300 text-sm">
+          <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>Built a strong graduate-level foundation in ML, deep learning, and NLP that directly preceded my move into GenAI and agentic AI engineering roles.</li>
+          <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>Bridged academic coursework with hands-on industry application, transitioning from Wipro's applied ML work into AbbVie's GenAI pharmacovigilance platform.</li>
+          <li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>Focus areas aligned closely with current work: retrieval systems, transformer architectures, and evaluation of AI-generated outputs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-6 border-t border-white/10 hero-bg">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold display mb-3">Contact</h2>
+    <p class="text-gray-400 mb-12">Open to Senior AI/ML and GenAI Engineering roles — email is fastest.</p>
+
+    <div class="grid md:grid-cols-2 gap-4 text-left">
+      <div class="card rounded-2xl p-5 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-gray-500 mb-1">Email</p>
+          <p class="font-medium">korrapatigeethika@gmail.com</p>
+        </div>
+        <button onclick="copyText('korrapatigeethika@gmail.com', this)" class="px-4 py-2 bg-white/10 rounded-lg text-sm hover:bg-white/20 transition">Copy</button>
+      </div>
+      <div class="card rounded-2xl p-5 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-gray-500 mb-1">Phone</p>
+          <p class="font-medium">+1 219-264-9310</p>
+        </div>
+        <button onclick="copyText('+12192649310', this)" class="px-4 py-2 bg-white/10 rounded-lg text-sm hover:bg-white/20 transition">Copy</button>
+      </div>
+      <div class="card rounded-2xl p-5 flex items-center justify-between md:col-span-2">
+        <div>
+          <p class="text-xs text-gray-500 mb-1">LinkedIn</p>
+          <p class="font-medium">linkedin.com/in/www.linkedin.com/in/geethika-korrapati-735b623a3</p>
+        </div>
+        <a href="www.linkedin.com/in/geethika-korrapati-735b623a3" target="_blank" class="px-4 py-2 bg-white/10 rounded-lg text-sm hover:bg-white/20 transition">Open</a>
+      </div>
+    </div>
+
+    <div class="card rounded-2xl p-8 mt-6 text-left">
+      <p class="text-xs text-gray-500 mb-1">Fastest way</p>
+      <h3 class="text-xl font-bold display mb-2">Send a quick email</h3>
+      <p class="text-gray-400 text-sm mb-6">Click below to open a pre-filled email. I'll reply as soon as I can.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="mailto:korrapatigeethika@gmail.com?subject=Let's%20connect" class="px-5 py-3 bg-white text-black rounded-xl font-semibold text-sm hover:bg-gray-200 transition">Compose Email</a>
+        <button onclick="copyText('korrapatigeethika@gmail.com', this)" class="px-5 py-3 border border-white/20 rounded-xl font-semibold text-sm hover:bg-white/10 transition">Copy Email</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-8 text-center text-xs text-gray-600 border-t border-white/10">© 2026 Geethika Korrapati</footer>
+
+<script>
+// ---------- DATA ----------
+const experience = [
+  {
+    id: 1,
+    company: "Pacific Gas and Electric Company (PG&E)",
+    title: "Senior AI/ML Engineer — LLM Evaluation & Agentic AI",
+    dates: "Jan 2026 – Present",
+    location: "Oakland, CA, USA",
+    summary: "Building evaluation frameworks and governance tooling for agentic AI and LLM-powered workflows across PG&E's AI development lifecycle.",
+    highlights: [
+      "Built a Python-based GenAI evaluation agent to assess AI-generated code, prompts, and agent outputs against quality benchmarks, integrated into PG&E's AIDLC platform.",
+      "Designed LLM evaluation frameworks measuring accuracy, relevance, consistency, hallucination, and robustness across the AI development lifecycle.",
+      "Evaluated multi-agent workflows end-to-end — from user prompt through agent decision-making, tool calls, and downstream actions.",
+      "Developed adversarial, edge-case, and prompt-injection evaluation scenarios to stress-test GenAI robustness.",
+      "Assessed AI governance and security controls, including approval gates and auditability across agent activities.",
+      "Led comparative evaluation of AI-assisted development tools (Kiro IDE, GitHub Copilot, Claude Code)."
+    ],
+    tech: ["Python", "LLM Evaluation", "Agentic AI", "Prompt Engineering", "AIDLC"]
+  },
+  {
+    id: 2,
+    company: "AbbVie",
+    title: "AI/ML Engineer — Pharmacovigilance GenAI Automation",
+    dates: "Jul 2025 – Dec 2025",
+    location: "Chicago, IL, USA",
+    summary: "Supported a RAG-based GenAI platform automating Periodic Safety Update Report (PSUR) workflows across clinical and regulatory documents.",
+    highlights: [
+      "Contributed to a RAG-based GenAI workflow for PSUR automation on Azure OpenAI, supporting retrieval, extraction, classification, and summarization of safety information.",
+      "Built document ingestion pipelines and assisted in developing NLP/LLM pipelines using GPT-4 Turbo, Claude 3, BioBERT, and Med-BERT for adverse event classification.",
+      "Supported LoRA and QLoRA fine-tuning experiments on domain-specific Hugging Face models for pharmacovigilance NLP tasks.",
+      "Implemented semantic search and hybrid retrieval using SBERT, FAISS, and Pinecone across PSUR and MedDRA datasets.",
+      "Helped build LLM-powered summarization and Q&A workflows using LangChain and LlamaIndex.",
+      "Explored AI-agent workflows using AutoGen and CrewAI for document processing and MedDRA coding."
+    ],
+    tech: ["RAG", "LangChain", "FAISS", "Pinecone", "LoRA/QLoRA", "Azure OpenAI"]
+  },
+  {
+    id: 3,
+    company: "Wipro Limited",
+    title: "Junior AI/ML Engineer",
+    dates: "Mar 2022 – Sep 2023",
+    location: "India",
+    summary: "Built applied ML solutions and data pipelines for enterprise use cases across internal and client-facing teams.",
+    highlights: [
+      "Built and deployed Python-based AI/ML solutions for enterprise use cases across internal teams and client-facing projects.",
+      "Engineered end-to-end data pipelines — collection, cleaning, preprocessing, and validation — for downstream ML workflows.",
+      "Supported demand forecasting and anomaly detection initiatives using historical retail sales data.",
+      "Contributed to an AI-powered cognitive search platform improving access to technical documentation.",
+      "Partnered with senior engineers and stakeholders in an Agile/Scrum environment across the full build-test-debug cycle."
+    ],
+    tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Agile"]
+  }
+];
+
+const skillCategories = [
+  { name: "Languages & IDEs", tags: ["core"], items: ["Python", "MATLAB", "Jupyter Notebook", "Google Colab", "VS Code", "SSMS"] },
+  { name: "GenAI & LLMs", tags: ["genai"], items: ["GPT-4 Turbo", "Claude 3", "LLaMA", "BERT", "T5", "Prompt Engineering", "RAG Architectures", "Hallucination Detection"] },
+  { name: "Agentic AI", tags: ["genai", "agentic"], items: ["AutoGen", "CrewAI", "Multi-Agent Workflows", "Tool/Function Calling", "Agent Evaluation"] },
+  { name: "Frameworks & Libraries", tags: ["core"], items: ["LangChain", "LlamaIndex", "Hugging Face Transformers", "PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"] },
+  { name: "NLP & Fine-Tuning", tags: ["nlp"], items: ["BioBERT", "Med-BERT", "LoRA", "QLoRA", "Semantic Search", "Text Classification", "NER"] },
+  { name: "Vector Search & Databases", tags: ["nlp", "data"], items: ["FAISS", "Pinecone", "SBERT", "Hybrid Search", "MongoDB", "SQL"] },
+  { name: "Cloud & DevOps", tags: ["cloud"], items: ["AWS", "Azure OpenAI", "Docker", "FastAPI", "REST APIs", "CI/CD", "Git"] },
+  { name: "Evaluation & Testing", tags: ["genai"], items: ["LLM Evaluation Frameworks", "Adversarial Testing", "Prompt-Injection Testing", "Functional/Integration Testing"] }
+];
+
+const chipFilters = [
+  { key: "all", label: "All" },
+  { key: "genai", label: "GenAI" },
+  { key: "agentic", label: "Agentic" },
+  { key: "nlp", label: "NLP" },
+  { key: "cloud", label: "Cloud" }
+];
+
+// ---------- EXPERIENCE RENDER ----------
+let activeRole = experience[0].id;
+
+function renderTimeline(filterText = "") {
+  const list = document.getElementById("timeline-list");
+  const q = filterText.toLowerCase();
+  const filtered = experience.filter(r =>
+    !q || r.title.toLowerCase().includes(q) || r.tech.some(t => t.toLowerCase().includes(q)) || r.company.toLowerCase().includes(q)
+  );
+  document.getElementById("role-count").textContent = filtered.length + " role" + (filtered.length !== 1 ? "s" : "");
+  list.innerHTML = filtered.map(r => `
+    <button onclick="selectRole(${r.id})" class="timeline-item ${r.id === activeRole ? 'active' : ''} w-full text-left rounded-xl border border-white/10 p-4 hover:border-purple-500/50 transition">
+      <div class="flex justify-between items-start gap-2">
+        <span class="font-semibold text-sm">${r.company}</span>
+        <span class="text-xs text-gray-500 shrink-0">${r.dates}</span>
+      </div>
+      <p class="text-sm text-gray-400 mt-1">${r.title}</p>
+      <p class="text-xs text-gray-600 mt-1">${r.location}</p>
+    </button>
+  `).join("");
+}
+
+function renderDetail() {
+  const r = experience.find(x => x.id === activeRole);
+  document.getElementById("role-detail").innerHTML = `
+    <p class="text-xs text-purple-400 mb-2">${r.dates}</p>
+    <h3 class="text-2xl font-bold display mb-1">${r.title}</h3>
+    <p class="text-gray-400 mb-6">${r.company} · ${r.location}</p>
+    <p class="text-gray-300 mb-6">${r.summary}</p>
+    <p class="text-sm text-gray-500 mb-3">Key Highlights</p>
+    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+      ${r.highlights.map(h => `<li class="flex gap-3"><span class="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></span>${h}</li>`).join("")}
     </ul>
-</div>
-
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h3 class="text-2xl font-bold text-purple-700 mb-2">
-                Project Engineer (AI/ML Engineer)
-            </h3>
-            <p class="text-gray-600 mb-6">
-                Wipro Limited, India | May 2022 – Sep 2023
-            </p>
-            <ul class="space-y-3 text-gray-700">
-                <li>Deployed multiple ML models on AWS EC2 with automated retraining workflows and CI/CD pipelines, improving deployment stability by 30%.</li>
-                <li>Refined a BERT-based sentiment analysis model, improving accuracy by 22% and providing actionable insights to UX and product teams.</li>
-                <li>Embedded GPT-3 with prompt engineering for real-time summaries of lengthy logs, reducing response time by 41%.</li>
-                <li>Engineered OCR + CNN document classification pipelines, processing 9,000+ scanned documents monthly, reducing turnaround time by 50%.</li>
-                <li>Built custom NLP pipelines using Hugging Face Transformers and NLTK, identifying consumer trends 18% faster.</li>
-                <li>Designed interactive Tableau dashboards to visualize NLP outputs for stakeholders.</li>
-            </ul>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold text-purple-700 mb-2">
-                Intern (AI/ML Engineer)
-            </h3>
-            <p class="text-gray-600 mb-6">
-                Wipro Limited, India | Mar 2022 – May 2022
-            </p>
-            <ul class="space-y-3 text-gray-700">
-                <li>Developed CNN-based models for extracting data from 7,000+ handwritten medical forms, reducing manual entry by 65%.</li>
-                <li>Contributed to LSTM and OpenCV surveillance models, reducing manual video review by over 50%.</li>
-                <li>Automated hyperparameter tuning, improving model training efficiency by 40%.</li>
-                <li>Created Power BI dashboards to monitor model performance and trends.</li>
-            </ul>
-        </div>
+    <p class="text-sm text-gray-500 mb-3">Tech Stack</p>
+    <div class="flex flex-wrap gap-2">
+      ${r.tech.map(t => `<span class="pill rounded-full px-3 py-1.5 text-xs">${t}</span>`).join("")}
     </div>
-</section>
+  `;
+}
 
-<section id="projects" class="py-20 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-purple-700">
-            Projects & Trainings
-        </h2>
+function selectRole(id) {
+  activeRole = id;
+  renderTimeline(document.getElementById("exp-filter").value);
+  renderDetail();
+}
 
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4 border-purple-500">
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Pre-Train a GPT from Scratch to Build VetGPT</h3>
-            <ul class="space-y-3 text-gray-700">
-                <li>Pre-trained a GPT model from scratch using **PyTorch and CUDA** on 4 GPUs.</li>
-                <li>Achieved **82% accuracy** on veterinary diagnostic data.</li>
-                <li>Curated a dataset of **50,000+ records** using custom web crawlers for training.</li>
-            </ul>
-        </div>
+document.getElementById("exp-filter").addEventListener("input", e => renderTimeline(e.target.value));
 
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4 border-purple-500">
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Cyber Infotech – Software Developer (USA, 2025)</h3>
-            <ul class="space-y-3 text-gray-700">
-                <li>Worked on **CrewAI architecture**, building AI-powered applications with full-stack solutions.</li>
-                <li>Developed and deployed scalable projects, integrating **ML models and cloud tech** to optimize performance.</li>
-            </ul>
-        </div>
+// ---------- SKILLS RENDER ----------
+let activeChip = "all";
 
-        <div class="bg-white rounded-lg shadow-lg p-8 border-l-4 border-purple-500">
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">TCS Youth Employment Program (YEP) – Software Development Training (2021)</h3>
-            <ul class="space-y-3 text-gray-700">
-                <li>Completed **Python programming and software development training**.</li>
-                <li>Covered coding fundamentals, **OOP concepts**, and small-scale web application development.</li>
-            </ul>
-        </div>
+function renderChips() {
+  document.getElementById("skill-chips").innerHTML = chipFilters.map(c => `
+    <button onclick="setChip('${c.key}')" class="pill ${c.key === activeChip ? 'pill-active' : ''} rounded-full px-4 py-2 text-sm transition">${c.label}</button>
+  `).join("");
+}
+
+function setChip(key) {
+  activeChip = key;
+  renderChips();
+  renderSkills(document.getElementById("skill-filter").value);
+}
+
+function renderSkills(filterText = "") {
+  const q = filterText.toLowerCase();
+  const grid = document.getElementById("skill-grid");
+  const filtered = skillCategories
+    .filter(cat => activeChip === "all" || cat.tags.includes(activeChip))
+    .map(cat => ({ ...cat, items: cat.items.filter(i => !q || i.toLowerCase().includes(q)) }))
+    .filter(cat => cat.items.length > 0);
+
+  grid.innerHTML = filtered.map(cat => `
+    <div class="card rounded-2xl p-6">
+      <h4 class="font-semibold mb-3">${cat.name}</h4>
+      <div class="flex flex-wrap gap-2">
+        ${cat.items.map(i => `<span class="pill rounded-full px-3 py-1.5 text-xs">${i}</span>`).join("")}
+      </div>
     </div>
-</section>
-<section id="skills" class="py-20 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-purple-700">
-            Skills & Technologies
-        </h2>
+  `).join("") || `<p class="text-gray-500 col-span-2 text-center">No skills match that search.</p>`;
+}
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Languages & IDEs</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Python</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">R</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Java(core)</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">SQL</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Jupyter</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Google Colab</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">VS Code</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">SSMS</span>
-                </div>
-            </div>
+document.getElementById("skill-filter").addEventListener("input", e => renderSkills(e.target.value));
 
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Data Science & ML</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">NumPy</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Pandas</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Scikit-learn</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">XGBoost</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Matplotlib</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Seaborn</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">NLTK</span>
-                </div>
-            </div>
+// ---------- UTIL ----------
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => btn.textContent = original, 1500);
+  });
+}
 
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Deep Learning & LLMs</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">PyTorch</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">TensorFlow</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Keras</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">CNN</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">RNN</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">LSTM</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">OCR</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">LLM</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">LangChain</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">CrewAI</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">LangGraph</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Hugging Face</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">GPT-4</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">BERT</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">T5</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">LLaMA</span>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Generative AI</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">RAG</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Prompt Engineering</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Fine-Tuning</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Semantic Search</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Stable Diffusion</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">DALL·E</span>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Cloud / MLOps / Tools</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium break-words">
-                        AWS (EC2, SageMaker, SQS, SNS, CodeDeploy, CloudWatch, API Gateway)
-                    </span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">GCP (Vertex AI, Cloud Storage)</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Docker</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">FastAPI</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">MLflow</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">DVC</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">CI/CD</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Tableau</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Power BI</span>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Databases</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">SQL Server</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">MySQL</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">PostgreSQL</span>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Redis</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="education" class="py-20 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-purple-700">
-            Education
-        </h2>
-        <div class="bg-purple-50 rounded-lg p-8 border-l-4 border-purple-700 shadow-lg">
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Master of Science in Computer Science</h3>
-            <p class="text-gray-600 text-lg">Purdue University, Hammond, Indiana | GPA: 3.42/4.0</p>
-        </div>
-    </div>
-</section>
-
-<section id="certifications" class="py-20 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-purple-700">
-            Certifications
-        </h2>
-
-        <div class="bg-purple-50 rounded-lg p-8 border-l-4 border-purple-700 shadow-lg space-y-4">
-            <p class="text-gray-800 text-lg">
-                Oracle Cloud Infrastructure 2025 Certified Generative AI Professional (Oracle)
-            </p>
-            <p class="text-gray-800 text-lg">
-                DevOps for Data Scientists
-            </p>
-            <p class="text-gray-800 text-lg">
-                Data Analysis with Python
-            </p>
-            <p class="text-gray-800 text-lg">
-                Python (TCS Youth Employment Program)
-            </p>
-            <p class="text-gray-800 text-lg">
-                Cloud Computing (Cognizant Digital Nurture)
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="achievements" class="py-20 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-purple-700 flex items-center justify-center">
-            <span class="mr-3">🏅</span>
-            Awards & Achievements
-        </h2>
-
-        <div class="space-y-8">
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-2xl font-bold text-purple-700 mb-2">
-                    🏆 Winner – Internal Machine Learning Hackathon
-                </h3>
-                <p class="text-gray-600 mb-4">
-                    (2021)
-                </p>
-                <p class="text-gray-700">
-                    Developed a real-time anomaly detection system using Isolation Forest to monitor system logs, enhancing incident response time and reducing false alerts by 40%.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section id="contact" class="py-20 px-4 bg-purple-50">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-purple-700">Get In Touch</h2>
-        <p class="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities. Reach out to me anytime.
-        </p>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-            <div class="flex items-center gap-3">
-                <svg class="w-6 h-6 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                <a href="mailto:korrapatigeethika@gmail.com" class="text-lg text-gray-800 hover:text-purple-700 transition-colors">korrapatigeethika@gmail.com</a>
-            </div>
-            <div class="flex items-center gap-3">
-                <svg class="w-6 h-6 text-purple-700" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                </svg>
-                <a href="https://www.linkedin.com/in/geethika-korrapati-3a0823248/" target="_blank" class="text-lg text-gray-800 hover:text-purple-700 transition-colors">LinkedIn Profile</a>
-            </div>
-            <div class="flex items-center gap-3">
-                <svg class="w-6 h-6 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.63l1.19 4.16a1 1 0 01-.44 1.16l-1.06.64a1 1 0 00-.44 1.16l3.3 5.72a1 1 0 001.16.44l.64-1.06a1 1 0 011.16-.44l4.16 1.19a1 1 0 01.63.94V19a2 2 0 01-2 2h-1C6.01 21 3 17.99 3 14V5z"></path>
-                </svg>
-                <span class="text-lg text-gray-800">+1 219-264-9310</span>
-            </div>
-        </div>
-    </div>
-</section>
+// ---------- INIT ----------
+renderTimeline();
+renderDetail();
+renderChips();
+renderSkills();
+</script>
 
 </body>
 </html>
-
